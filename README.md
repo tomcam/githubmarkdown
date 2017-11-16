@@ -23,7 +23,7 @@ Repeat as necessary.
 
 ### [Create and configure a repository](createrepo.md)
 
-### [Clone the repository on your work machine](clone.md)
+### [Clone the repository to your work machine](clone.md)
 
 ### [Reference](reference.md)
 
