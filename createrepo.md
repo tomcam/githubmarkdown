@@ -1,5 +1,7 @@
 # Create and configure a repository
 
+Git expects your project to live in a directory true with a root directory.
+
 # MISSING: The github.io stuff so it uses Jekylll
 
 * Log into GitHub (create an account if necessary).
@@ -7,7 +9,7 @@
 
 The `Create a new repository` page appears.
 
-* Under `Repository name`, write a programmer-style name: short, all lower case, no spaces, and *-* between letters if necessary.
+* Under `Repository name`, write a programmer-style name: short, all lower case, no spaces, and use the hyphen (*-*) character between letters if necessary.
 
 * Under `Description` write anything you want, but keep in mind it will be public and it should also feel inviting to the reader.
 
