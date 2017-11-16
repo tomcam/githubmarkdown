@@ -1,4 +1,4 @@
-# Using GitHub to manage Markdown projects
+# Using GitHub and Markdown to manage documentation projects
 
 You can use GitHub for documentation. Write the files using [Markdown](https://github.github.com/gfm/),
 patch them together with a simple table of contents like this one, and use GitHub to publish your
