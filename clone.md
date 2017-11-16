@@ -90,30 +90,38 @@ There two ways to perform the download: Using `ssh` or using HTTPS. GitHub [reco
 You'll probably see an option to use SSH:
 ![Green Clone or download button](images/clone-download-button-ssh.png)
 
+* Instead, choose `Use HTTPS`:
 
-clone-download-button-https
+![Green Clone or download button](images/clone-download-button-https.png)
 
+* Choose the clipboard icon to copy the full path to your system clipboard:
+
+![Green Clone or download button](images/clone-download-clipboard.png)
+
+You now have a path on your clipboard in this format:
+
+```
 https://github.com/tomcam/deleteme.git
+```
 
-* Clone it like this:
+* Download the git archive by typing `git clone ` at the terminal, then pasting in the repo's path:
 
 ```
-git clone git@github.com:tomcam/deleteme.git
+git clone https://github.com/tomcam/deleteme.git
 Cloning into 'deleteme'...
-The authenticity of host 'github.com (192.30.253.113)' can't be established.
-RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
-Are you sure you want to continue connecting (yes/no)? y 
-Please type 'yes' or 'no': yes
-Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
-Permission denied (publickey).
-fatal: Could not read from remote repository.
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
 ```
 
-See [ssh](ssh.md) to learn how to create your 
+You may wish to do a directory listing to confirm the repo has been downloaded and expanded into its 
+own directory:
 
-Please make sure you have the correct access rights
-and the repository exists.
+``
+$ ls
+deletme
 
-
-
-
+$ ls deleteme/
+LICENSE		README.md
+```
