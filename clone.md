@@ -8,10 +8,19 @@ Now let's make a copy of the repository on your work machine.
 
 On Macintosh systems, you may be required to download XCode if you haven't already. And before you download XCode, you need to create a free account with the Apple Developer Program.
 
-* Follow those instructions and sign up as needed. 
+### If you're a Macintosh developer without Xcode:
+
+* If you're using Mac and haven't join the Apple Developer Program, do so at [https://developer.apple.com/programs/enroll/](https://developer.apple.com/programs/enroll/).
+
+If you come from a traditional Linux, Unix, or Windows background you may be skeptical that just to use 
+standard command line tools you must sign up for a special program and download a huge product like Xcode. Sounds crazy,but there's no way around it.
+
+* Next, obtain Xcode at [https://developer.apple.com/xcode/downloads/](https://developer.apple.com/xcode/downloads/).
 
 Do not be distracted by what seems like a requirement to pay
 for the account. That's only if you're going to list a product in the App Store.
+
+### Confirm that you have git
 
 * To ensure you have Git, open your terminal and enter `git` at the command line.
 
@@ -126,3 +135,90 @@ deletme
 $ ls deleteme/
 LICENSE		README.md
 ```
+
+## Check that version control is working
+
+Here's something that you'll often do when using Git: run `git status` to see if any files have change. 
+
+* Run `git status` at the command line. 
+
+```bash
+git status
+```
+
+You'll see a message that everything is up to date:
+
+```
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+```
+
+### Alter a file slightly 
+
+* Make a trival change to a file in the project. 
+
+In this example, there are only two files: `LICENSE` and `README.md`. We'll bring up the `README.md` file in a text editor to view its contents. Here's what's in it:
+
+```
+# deleteme
+hi
+```
+
+It's a very, very simple Markdown file. 
+
+* Let's add the word `dude` after the word `hi`:
+
+```
+# deleteme
+hi dude
+```
+
+* Save the file and exit
+
+### Run git status to see what's changed
+
+Now that the `README.md` differs from what's on GitHub, Git should know.
+
+* At the terminal, enter `git status` again:
+
+```bash
+git status
+```
+
+And you're told there's been a change to this file:
+
+```
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+### Run git diff to see what changes were made to a file
+
+Imagine you'd changed a number of files and didn't remember what alterations had been made. You'd simply choose one of the files listed as `modified` in the `git status` report and run a `git diff` on it:
+
+```bash
+git diff README.md
+```
+
+The output shows the line's contents both before and after the change:
+
+```
+diff --git a/README.md b/README.md
+index 3455f43..76b9240 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,2 @@
+ # deleteme
+-hi
++hi dude
+```
+
+
