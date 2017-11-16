@@ -25,6 +25,8 @@ Repeat as necessary.
 
 ### [Clone the repository to your work machine](clone.md)
 
+### [ssh](ssh.md)
+
 ### [How to do a pull request (PR)](pr.cmd)
 
 ### [Reference](reference.md)
