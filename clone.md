@@ -88,6 +88,7 @@ to our system's clipboard.
 There two ways to perform the download: Using `ssh` or using HTTPS. GitHub [recommends the latter](https://help.github.com/articles/which-remote-url-should-i-use/) for many reasons, including proper functioning from behind firewalls.
 
 You'll probably see an option to use SSH:
+
 ![Green Clone or download button](images/clone-download-button-ssh.png)
 
 * Instead, choose `Use HTTPS`:
@@ -118,7 +119,7 @@ Unpacking objects: 100% (4/4), done.
 You may wish to do a directory listing to confirm the repo has been downloaded and expanded into its 
 own directory:
 
-``
+```
 $ ls
 deletme
 
