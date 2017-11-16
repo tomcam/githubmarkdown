@@ -156,7 +156,11 @@ nothing to commit, working tree clean
 
 ### Alter a file slightly 
 
-* Make a trival change to a file in the project. 
+Let's Make a trival change to a file in the project. Normally you might make a backup copy of that file
+just to be on the safe side. You don't have to do so in this case. The reason you don't have to 
+is that, hey, this is Git. Its whole reason to exist is so that you can return a file to a previous
+checked-in state. The other reason is to illustrate `git checkout`, which blows away any changes made in the current 
+editing session and gives you the most current checked-in version of the file.
 
 In this example, there are only two files: `LICENSE` and `README.md`. We'll bring up the `README.md` file in a text editor to view its contents. Here's what's in it:
 
@@ -174,7 +178,9 @@ It's a very, very simple Markdown file.
 hi dude
 ```
 
-* Save the file and exit
+* Save the file and exit.
+
+The truth is you could have made any changes to the file and it wouldn't matter for this example as you'll see in a moment. But when you're learning something along these lines it's always good to do the simplest possible test of your knowledge before moving on to more complicated tasks.
 
 ### Run git status to see what's changed
 
@@ -220,5 +226,39 @@ index 3455f43..76b9240 100644
 -hi
 +hi dude
 ```
+
+## Get rid of the changes with git checkout
+
+One of the best things about Git is that it's pretty much the ultimate undo. If you make changes to 
+something and they turn out to cause problems, you can roll back those changes.
+
+In this particular example, we have a super-easy solution to this problem. If we run `git checkout` on the file, git will simply copy back the latest version of that file from your Git archive. Note that because we didn't check in any of our changes, this action cannot be undone.
+
+* Run `git checkout` on the file that was just changed:
+
+```bash
+git checkout README.md
+```
+
+### See if the checkout succeeded with another git status
+
+Git makes no response after you've done a `git checkout`. That can be a little disconcerting. Let's double-check that the checkout worked.
+
+* Run `git status` to see the state of your repo:
+
+```bash
+git status
+```
+
+Git acts like nothing ever happened to your repo:
+
+```
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+```
+
+
+
 
 
