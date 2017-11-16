@@ -2,7 +2,7 @@
 
 See [https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
-** What "The authenticity of host 'github.com (192.30.253.113)' can't be established" means
+## What "The authenticity of host 'github.com (192.30.253.113)' can't be established" means
 
 Suppose you wish to clone a project from GitHub. You run this command:
 
