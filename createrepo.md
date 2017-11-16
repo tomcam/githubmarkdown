@@ -1,5 +1,7 @@
 # Create and configure a repository
 
+# MISSING: The github.io stuff so it uses Jekylll
+
 * Log into GitHub (create an account if necessary).
 * Look for the *+* at the top of the page. Click it, then choose `New repository`.
 
