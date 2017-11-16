@@ -1,9 +1,5 @@
 # Clone the repository to your work machine
 
-# TODO:
-
-* Cover creation of [ssh keys](https://help.github.com/articles/set-up-git/)
-
 Now let's make a copy of the repository on your work machine.
 
 ## Install Git (and Xcode if you're an Apple developer)
@@ -80,7 +76,24 @@ OR
 md %USERPROFILE%/myawesomeproduct
 ```
 
-## Run git clone to make a local copy MISSING STUFF THIS IS JUST A PLACEHOLDER
+## Run git clone to make a local copy
+
+You're going to run `git clone` from the terminal. That means a lot of typing to get the address of the repository correct.  GitHub makes it easy to construct the right command line by giving you the full path interactively and pasting it right
+to our system's clipboard.
+
+* Find the repository you're interested in, for example, `https://github.com/tomcam/deleteme`, and look for the big green `Clone or download` button on its home page:
+
+![Green Clone or download button](images/github-clone-download-button.png)
+
+There two ways to perform the download: Using `ssh` or using HTTPS. GitHub [recommends the latter](https://help.github.com/articles/which-remote-url-should-i-use/) for many reasons, including proper functioning from behind firewalls.
+
+You'll probably see an option to use SSH:
+![Green Clone or download button](images/clone-download-button-ssh.png)
+
+
+clone-download-button-https
+
+https://github.com/tomcam/deleteme.git
 
 * Clone it like this:
 
